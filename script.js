@@ -1,16 +1,14 @@
-$("#container").mouseenter(function(e) {
+window.onload = function() {
+  const audio = document.getElementById('background-audio');
+  const playButton = document.getElementById('play-audio');
+ 
+  setTimeout(() => {
+    playButton.click();
+  }, 100);
 
-    $(this).animate({
-      scrollTop: $(
-        'html, body').get(0).scrollHeight
-    }, 2000);
-  
-  });
-  
-  $("#container").mouseleave(function(e) {
-  
-    $(this).animate({
-      scrollTop: 0
-    }, 2000);
-  
-  });
+  playButton.onclick = function() {
+    audio.play().catch(error => {
+      console.log('Audio playback failed:', error);
+    });
+  };
+};
