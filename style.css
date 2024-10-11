@@ -11,19 +11,25 @@ body {
 nav {
   display: flex;
   justify-content: right;
-  padding: 10px 0;
+  align-items: center;
   padding: 20px;
-  line-height: 0;
 }
 
-nav a {
+nav a,
+#play-audio {
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
+  background-color: transparent;
+  font-family: Nunito;
+  border: none;
+  cursor: pointer;
   transition: transform 0.3s ease;
+  font-size: 16px;
 }
 
-nav a:hover {
+nav a:hover,
+#play-audio:hover {
   transform: scale(1.25);
 }
 
@@ -82,21 +88,20 @@ footer {
   padding: 10px 0;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 767px) {
   header {
-      font-size: 24px;
+     font-size: 24px;
   }
 
   nav {
-      font-size: 16px;
+     font-size: 16px;
   }
 
   main {
-      font-size: 16px;
+     font-size: 16px;
   }
 
   footer {
-      font-size: 14px;
+     font-size: 14px;
   }
 }
